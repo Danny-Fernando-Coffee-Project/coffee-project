@@ -58,9 +58,9 @@ submitButton.addEventListener('click', updateCoffees);
 
 
 //search bar functionality
-let searchBar = document.querySelector("#searchBar");
-let searchButton = document.querySelector("#firstSubmit");
-
-searchButton.addEventListener('click',function (){
-    alert(searchBar.value)
-})
+// let searchBar = document.querySelector("#searchBar");
+// let searchButton = document.querySelector("#firstSubmit");
+//
+// searchButton.addEventListener('click',function (){
+//     alert(searchBar.value)
+// })
