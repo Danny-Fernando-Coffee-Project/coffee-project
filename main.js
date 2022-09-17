@@ -40,38 +40,39 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(coffees);
 
     submitButton.addEventListener('click', updateCoffees);
+}
 
 
 // TESTING CODE!!!
-    $('#search-input').on('keyup', function () {
-        let value = $(this).val()
-        console.log('Value:', value)
-        let data = searchTable(value, coffees)
-        buildTable(data)
-    })
-    buildTable(coffees)
-
-    function searchTable(value, data) {
-        let filterData = []
-
-        for (let i = 0; i < data.length; i++) {
-            value = value.toLowerCase()
-            let name = data[i].name.toLowerCase()
-
-            if (name.includes(value)) {
-                filterData.push(data[i])
-            }
-        }
-
-        return filterData
-    }
-
-    function buildTable(data) {
-        let table = document.getElementById('coffees')
-        table.innerHTML = ''
-        for (let i = 0; i < data.length; i++) {
-
-        }
-    }
-
-}
+//     $('#search-input').on('keyup', function () {
+//         let value = $(this).val()
+//         console.log('Value:', value)
+//         let data = searchTable(value, coffees)
+//         buildTable(data)
+//     })
+//     buildTable(coffees)
+//
+//     function searchTable(value, data) {
+//         let filterData = []
+//
+//         for (let i = 0; i < data.length; i++) {
+//             value = value.toLowerCase()
+//             let name = data[i].name.toLowerCase()
+//
+//             if (name.includes(value)) {
+//                 filterData.push(data[i])
+//             }
+//         }
+//
+//         return filterData
+//     }
+//
+//     function buildTable(data) {
+//         let table = document.getElementById('coffees')
+//         table.innerHTML = ''
+//         for (let i = 0; i < data.length; i++) {
+//
+//         }
+//     }
+//
+// }
