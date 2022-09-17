@@ -38,7 +38,26 @@ function updateCoffees(e) {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+const search = () => {
+    const searchBox = document.getElementById("search-item").value.toUpperCase();
+    const coffeesTbody = document.getElementById("coffees");
+    const coffee = document.querySelectorAll(".coffee")
+    const coffeeName = document.getElementsByTagName("h3")
 
+    for(let i = 0; i < coffeeName.length; i++) {
+        let match = coffee[i].getElementsByTagName('h3')[0];
+
+        if(match){
+            let textValue = match.textContent || match.innerHTML
+
+            if(textValue.toUpperCase().indexOf(searchBox) > -1 ) {
+                coffee[i].style.display = "";
+            }else {
+                coffee[i].style.display = "none";
+            }
+        }
+    }
+}
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
