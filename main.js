@@ -22,75 +22,56 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
-}
+//     tbody.innerHTML = renderCoffees(filteredCoffees);
+// }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-let coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
-];
-
-let tbody = document.querySelector('#coffees');
-let submitButton = document.querySelector('#submit');
-let roastSelection = document.querySelector('#roast-selection');
-
-tbody.innerHTML = renderCoffees(coffees);
-
-submitButton.addEventListener('click', updateCoffees);
 
 
-// search bar functionality
-// let searchBar = document.querySelector("#searchBar");
-// let searchButton = document.querySelector("#firstSubmit");
-//
-// searchButton.addEventListener('click',function (){
-//     alert(searchBar.value)
-// })
-// I EDIT THIS
-// class="coffee"
-// class="idsOfCoffees"
-const userCardTemplate = document.querySelector("[data-user-template]")
-const coffee = userCardTemplate.content.cloneNode(true).children[0]
-console.log(coffee)
-const searchInput = document.querySelector("[data-search]")
+    let tbody = document.querySelector('#coffees');
+    let submitButton = document.querySelector('#submit');
+    let roastSelection = document.querySelector('#roast-selection');
 
-// searchInput.addEventListener("input", (e) => { // This function works!
-//     const value = e.target.value
-//     console.log(value)
-// })
+    tbody.innerHTML = renderCoffees(coffees);
+
+    submitButton.addEventListener('click', updateCoffees);
 
 
+// TESTING CODE!!!
+    $('#search-input').on('keyup', function () {
+        let value = $(this).val()
+        console.log('Value:', value)
+        let data = searchTable(value, coffees)
+        buildTable(data)
+    })
+    buildTable(coffees)
 
-searchInput.addEventListener("input", (e) => { // This function works!
-    const value = e.target.value
-})
-//     coffee.forEach(coffee => {
-//         const isVisible = coffee.includes(value)
-//         coffee.element.classList.toggle("hide", !isVisible)
-//     })
-// })
-// const searchInput = document.querySelector("[data-search]")
-// searchInput.addEventListener("input", (e) => {
-//     const value = e.target.value
-//     console.log(value)
-// })
+    function searchTable(value, data) {
+        let filterData = []
 
+        for (let i = 0; i < data.length; i++) {
+            value = value.toLowerCase()
+            let name = data[i].name.toLowerCase()
 
+            if (name.includes(value)) {
+                filterData.push(data[i])
+            }
+        }
+
+        return filterData
+    }
+
+    function buildTable(data) {
+        let table = document.getElementById('coffees')
+        table.innerHTML = ''
+        for (let i = 0; i < data.length; i++) {
+
+        }
+    }
+
+}
