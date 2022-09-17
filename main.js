@@ -3,8 +3,8 @@
 function renderCoffee(coffee) {
     let html = '<div class="coffee">';
     html += '<td class="idsOfCoffees">' + coffee.id + '</td>';
-    html += '<h2>' + coffee.name + '</h2>';
-    html += '<p>' + coffee.roast + '</p>';
+    html += '<h2 class="coffeeName">' + coffee.name + '</h2>';
+    html += '<p class="coffeeRoast">' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
@@ -58,9 +58,39 @@ submitButton.addEventListener('click', updateCoffees);
 
 
 // search bar functionality
-let searchBar = document.querySelector("#searchBar");
-let searchButton = document.querySelector("#firstSubmit");
+// let searchBar = document.querySelector("#searchBar");
+// let searchButton = document.querySelector("#firstSubmit");
+//
+// searchButton.addEventListener('click',function (){
+//     alert(searchBar.value)
+// })
+// I EDIT THIS
+// class="coffee"
+// class="idsOfCoffees"
+const userCardTemplate = document.querySelector("[data-user-template]")
+const coffee = userCardTemplate.content.cloneNode(true).children[0]
+console.log(coffee)
+const searchInput = document.querySelector("[data-search]")
 
-searchButton.addEventListener('click',function (){
-    alert(searchBar.value)
+// searchInput.addEventListener("input", (e) => { // This function works!
+//     const value = e.target.value
+//     console.log(value)
+// })
+
+
+
+searchInput.addEventListener("input", (e) => { // This function works!
+    const value = e.target.value
 })
+//     coffee.forEach(coffee => {
+//         const isVisible = coffee.includes(value)
+//         coffee.element.classList.toggle("hide", !isVisible)
+//     })
+// })
+// const searchInput = document.querySelector("[data-search]")
+// searchInput.addEventListener("input", (e) => {
+//     const value = e.target.value
+//     console.log(value)
+// })
+
+
