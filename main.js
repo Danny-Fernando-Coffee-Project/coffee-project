@@ -1,9 +1,9 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = '<div class="coffee">';
-    html += '<td class="idsOfCoffees">' + coffee.id + '</td>';
-    html += '<h2>' + coffee.name + '</h2>';
+    var html = '<div class="coffee">';
+    html += '<div class="d-none">' + coffee.id + '</div>';
+    html += '<h3>' + coffee.name + '</h3>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
@@ -11,8 +11,8 @@ function renderCoffee(coffee) {
 }
 
 function renderCoffees(coffees) {
-    let html = '';
-    for(let i = 0; i < 14; i++) {
+    var html = '';
+    for(var i = coffees.length - 1; i >= 0; i--) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -20,8 +20,8 @@ function renderCoffees(coffees) {
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    let selectedRoast = roastSelection.value;
-    let filteredCoffees = [];
+    var selectedRoast = roastSelection.value;
+    var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
@@ -31,7 +31,7 @@ function updateCoffees(e) {
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-let coffees = [
+var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
@@ -48,19 +48,10 @@ let coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-let tbody = document.querySelector('#coffees');
-let submitButton = document.querySelector('#submit');
-let roastSelection = document.querySelector('#roast-selection');
+var tbody = document.querySelector('#coffees');
+var submitButton = document.querySelector('#submit');
+var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-
-
-// search bar functionality
-let searchBar = document.querySelector("#searchBar");
-let searchButton = document.querySelector("#firstSubmit");
-
-searchButton.addEventListener('click',function (){
-    alert(searchBar.value)
-})
