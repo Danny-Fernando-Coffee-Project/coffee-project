@@ -63,20 +63,20 @@ const search = () => {
 }
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
-    {id: 1, name: 'Light City', roast: 'light', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
-    {id: 2, name: 'Half City', roast: 'light', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
-    {id: 3, name: 'Cinnamon', roast: 'light', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
-    {id: 4, name: 'City', roast: 'medium', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
-    {id: 5, name: 'American', roast: 'medium', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
-    {id: 6, name: 'Breakfast', roast: 'medium', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
-    {id: 7, name: 'High', roast: 'dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
-    {id: 8, name: 'Continental', roast: 'dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
-    {id: 9, name: 'New Orleans', roast: 'dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
-    {id: 10, name: 'European', roast: 'dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
-    {id: 11, name: 'Espresso', roast: 'dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
-    {id: 12, name: 'Viennese', roast: 'dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
-    {id: 13, name: 'Italian', roast: 'dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
-    {id: 14, name: 'French', roast: 'dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 1, name: 'Light City', roast: 'Light', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 2, name: 'Half City', roast: 'Light', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 3, name: 'Cinnamon', roast: 'Light', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 4, name: 'City', roast: 'Medium', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 5, name: 'American', roast: 'Medium', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 6, name: 'Breakfast', roast: 'Medium', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 7, name: 'High', roast: 'Dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 8, name: 'Continental', roast: 'Dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 9, name: 'New Orleans', roast: 'Dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 10, name: 'European', roast: 'Dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 11, name: 'Espresso', roast: 'Dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 12, name: 'Viennese', roast: 'Dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 13, name: 'Italian', roast: 'Dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 14, name: 'French', roast: 'Dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
 ];
 
 let tbody = document.querySelector('#coffees');
