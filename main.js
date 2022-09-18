@@ -3,12 +3,14 @@
 function renderCoffee(coffee) {
     let html = '<div class="coffee">';
     // html += '<div class="d-none">' + coffee.id + '</div>';
-    html += '<h3>' + coffee.name + '</h3>';
+    html += '<h2>' + coffee.name + '</h2>';
     html += '<p>' + coffee.roast + '</p>';
+    html += '<div class="coffeeImg">' + coffee.img + '</div>';
     html += '</div>';
 
     return html;
 }
+// html += '<h2>' + coffee.name + '</h2>';<img src="img/Bros-Coffee.png" alt="">
 
 function renderCoffees(coffees) {
     let html = '';
@@ -40,12 +42,12 @@ function updateCoffees(e) {
 }
 const search = () => {
     const searchBox = document.getElementById("search-item").value.toUpperCase();
-    const coffeesTbody = document.getElementById("coffees");
+    // const coffeesTbody = document.getElementById("coffees");
     const coffee = document.querySelectorAll(".coffee")
-    const coffeeName = document.getElementsByTagName("h3")
+    const coffeeName = document.getElementsByTagName("h2")
 
     for(let i = 0; i < coffeeName.length; i++) {
-        let match = coffee[i].getElementsByTagName('h3')[0];
+        let match = coffee[i].getElementsByTagName('h2')[0];
 
         if(match){
             let textValue = match.textContent || match.innerHTML
@@ -60,7 +62,7 @@ const search = () => {
 }
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
+    {id: 1, name: 'Light City', roast: 'light', img:'<img src="img/light-city.png" alt="">'},
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
     {id: 4, name: 'City', roast: 'medium'},
