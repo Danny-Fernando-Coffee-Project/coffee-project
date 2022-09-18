@@ -1,0 +1,64 @@
+table {
+    border-collapse: collapse;
+    margin: 15px 0;
+    background-color: rgb(242,240,235);
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+.idsOfCoffees{
+    display: none;
+}
+
+.coffee{
+    margin: 3rem 1rem;
+    border: none;
+}
+/*From Logo*/
+.Bro-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: rgb(242,240,235);
+}
+h1 {
+    font-family: Santana-Black, serif;
+    background-color: rgb(242,240,235);
+}
+h2 { /* COFFEES NAME */
+    text-align: center;
+    font-family: Santana, sans-serif, serif;
+    padding-left: 70px;
+}
+h4 {
+    font-family: Santana-Black, serif;
+}
+p { /* ROAST */
+    text-align: center;
+    font-family: Santana, sans-serif, serif;
+    padding-left: 70px;
+}
+.subHeading {
+    font-family: Santana-Black, serif;
+
+}
+.coffeeImg {
+    display: flex;
+    align-items: center;
+    padding-left: 70px;
+    background-color: rgb(242,240,235);
+}
+
+body {
+    background-color: rgb(242,240,235) !important;
+}
+.card {
+    background-color: rgb(242,240,235) !important;
+}
+.btn-primary {
+    background-color: rgb(0,100,60) !important;
+}
