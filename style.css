@@ -26,3 +26,15 @@ td, th {
 h1 {
     font-family: Santana-Black, serif;
 }
+h2 {
+    text-align: center;
+
+}
+p {
+    text-align: center;
+}
+.coffeeImg {
+    display: flex;
+    align-items: center;
+    padding-left: 180px;
+}
