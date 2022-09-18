@@ -6,7 +6,6 @@ function renderCoffee(coffee) {
     html += '<h2>' + coffee.name + '</h2>';
     html += '<p>' + coffee.roast + '</p>';
     html += '<div class="coffeeImg">' + coffee.img + '</div>';
-
     html += '</div>';
 
     return html;
@@ -25,7 +24,7 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
-    if (selectedRoast === 'all') {
+    if (selectedRoast === 'All') {
         filteredCoffees = coffees.filter(function (coffee){
             return coffee.roast !== selectedRoast;})
     }
