@@ -11,3 +11,8 @@ td, th {
 .idsOfCoffees{
     display: none;
 }
+
+.coffee{
+    margin: 3rem 1rem;
+    border: none;
+}
