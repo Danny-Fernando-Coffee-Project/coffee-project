@@ -90,7 +90,10 @@ a {
 .custom-navbar {
     background-color: rgb(242,240,235);
 }
-
+.codeUp {
+    font-family: Silkscreen,sans-serif;
+    width: 305px;
+}
 
 /*MEDIA QUERIES*/
 /* Small devices (phones and pocket devices, 576 and up) */

@@ -18,6 +18,7 @@ function renderCoffees(coffees) {
 }
 // sorting the coffees by rost
 function updateCoffees() {
+    // e.preventDefault(); // Dont Add this. It will make the img not add coffee
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
 // if the select matches All then its compared with the rost of each coffee
@@ -36,6 +37,7 @@ function updateCoffees() {
 }
 
 const search = () => {
+
     const searchBox = document.getElementById("search-item").value.toUpperCase();
     // const coffeesTbody = document.getElementById("coffees");
     const coffee = document.querySelectorAll(".coffee")
@@ -85,7 +87,7 @@ roastSelection.addEventListener('change', updateCoffees);
 let addRoastSelection = document.querySelector('#roast-selection2');
 let userInput = document.querySelector('#search-item2')
 let newCoffeeSubmit = document.getElementById('submit2')
-function func(event){
+function func(){
     event.preventDefault()
 }
 
