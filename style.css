@@ -17,3 +17,9 @@ td, th {
     border: none;
 }
 
+h2{
+    padding-left: 3rem;
+}
+p{
+    alignment-baseline: bottom;
+}

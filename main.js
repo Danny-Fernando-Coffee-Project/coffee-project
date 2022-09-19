@@ -1,11 +1,11 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = '<div class="coffee">';
+    let html = '<div class="coffee d-flex">';
     // html += '<div class="d-none">' + coffee.id + '</div>';
     // html += '<div class="coffeeImg">' + coffee.img + '</div>';
     html += '<h2>' + coffee.name + '</h2>';
-    html += '<p>' + coffee.roast + '</p>';
+    html += '<p class="inline-block">' + coffee.roast + '</p>';
 
     html += '</div>';
 
