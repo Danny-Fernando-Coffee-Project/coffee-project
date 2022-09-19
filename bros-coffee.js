@@ -76,7 +76,7 @@ let roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
-roastSelection.addEventListener('change', updateCoffees)
+roastSelection.addEventListener('change', updateCoffees);
 
 //  TESTING LOCAL STORAGE CODE
 let addRoastSelection = document.querySelector('#roast-selection2');
