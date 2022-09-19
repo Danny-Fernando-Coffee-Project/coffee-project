@@ -22,19 +22,13 @@ function renderCoffees(coffees) {
 function updateCoffees() {
 
     e.preventDefault(); // Dont Add this. It will make the img not add coffee
-    // don't submit the form, we just want to update the data
+
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
     if (selectedRoast === 'All') {
         filteredCoffees = coffees.filter(function (coffee){
             return coffee.roast !== selectedRoast;})
     }
-    //this does nothing
-    // else {
-    //     filteredCoffees = coffees.filter(function (coffee){
-    //
-    //     });
-    // }
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);

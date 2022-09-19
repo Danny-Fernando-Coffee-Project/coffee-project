@@ -2,15 +2,12 @@
 
 function renderCoffee(coffee) {
     let html = '<div class="coffee">';
-    // html += '<div class="d-none">' + coffee.id + '</div>';
     html += '<h2>' + coffee.name + '</h2>';
     html += '<p>' + coffee.roast + '</p>';
     html += '<div class="coffeeImg">' + coffee.img + '</div>';
     html += '</div>';
-
     return html;
 }
-// html += '<h2>' + coffee.name + '</h2>';<img src="img/Bros-Coffee.png" alt="">
 
 function renderCoffees(coffees) {
     let html = '';
@@ -21,21 +18,12 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees() {
-
-    // e.preventDefault(); // Dont Add this. It will make the img not add coffee
-    // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
     if (selectedRoast === 'All') {
         filteredCoffees = coffees.filter(function (coffee){
             return coffee.roast !== selectedRoast;})
     }
-    //this does nothing
-    // else {
-    //     filteredCoffees = coffees.filter(function (coffee){
-    //
-    //     });
-    // }
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
@@ -43,6 +31,7 @@ function updateCoffees() {
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
 const search = () => {
     const searchBox = document.getElementById("search-item").value.toUpperCase();
     // const coffeesTbody = document.getElementById("coffees");
@@ -54,7 +43,6 @@ const search = () => {
 
         if(match){
             let textValue = match.textContent || match.innerHTML
-
             if(textValue.toUpperCase().indexOf(searchBox) > -1 ) {
                 coffee[i].style.display = "";
             }else {
@@ -63,6 +51,7 @@ const search = () => {
         }
     }
 }
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
     {id: 1, name: 'Light City', roast: 'Light', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
@@ -86,19 +75,18 @@ let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
-
 submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees)
 
 //  TESTING LOCAL STORAGE CODE
 let addRoastSelection = document.querySelector('#roast-selection2');
 let userInput = document.querySelector('#search-item2')
-let newCoffeeSumbit = document.getElementById('submit2')
+let newCoffeeSubmit = document.getElementById('submit2')
 function func(e) {
     event.preventDefault()
 }
 
-newCoffeeSumbit.addEventListener('onclick', addCoffee)
+newCoffeeSubmit.addEventListener('onclick', addCoffee)
 
 function addCoffee() {
     let newCoffee = {
@@ -110,19 +98,9 @@ function addCoffee() {
     //push puts it to the back
     coffees.unshift(newCoffee);
     let x = [];
-
     for(let i = 0; i < coffees.length; i++){
         x = x + coffees[i];
     }
     updateCoffees();
     alert("Thank you for adding your coffee bro!");
 }
-
-
-// const storageInput = document.querySelector('.storage');
-// const text = document.querySelector('.text');
-// const button = document.querySelector('.button ')
-//
-// storageInput.addEventListener('input', letter => {
-//     text.textContent = letter.target.value
-// })
