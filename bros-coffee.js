@@ -115,6 +115,7 @@ function addCoffee() {
         x = x + coffees[i];
     }
     updateCoffees();
+    alert("Thank you for adding your coffee bro!");
 }
 
 
