@@ -1,5 +1,8 @@
 
 /*ELEMENT SELECTORS*/
+html {
+    cursor: url("img/Bros-curser.png"), auto !important;
+}
 body {
     background-color: rgb(242,240,235) !important;
 }
@@ -42,7 +45,9 @@ a {
 }
 
 /*CLASS SELECTORS*/
-
+.coffee:hover {
+    transform: scale(1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
 .idsOfCoffees{
     display: none;
 }
