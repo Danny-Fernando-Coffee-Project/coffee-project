@@ -21,7 +21,8 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    // e.preventDefault(); Dont Add this. It will make the img not add coffee
+    // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
     if (selectedRoast === 'All') {
@@ -110,7 +111,6 @@ function addCoffee() {
     for(let i = 0; i < coffees.length; i++){
         x = x + coffees[i];
     }
-    return document.getElementById('test').innerHTML= x;
     updateCoffees();
 }
 
