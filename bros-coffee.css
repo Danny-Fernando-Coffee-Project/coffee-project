@@ -76,6 +76,7 @@ a {
 .custom-navbar {
     background-color: rgb(242,240,235);
 }
+
 /* Small devices (phones and pocket devices, 576 and up) */
 @media screen and (max-width: 576px) {
     tbody {
