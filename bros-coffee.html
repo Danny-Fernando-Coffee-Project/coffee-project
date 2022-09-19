@@ -37,17 +37,16 @@
                 <hr>
                 <h3 class="subHeading"> ADD A COFFEE</h3>
                 <!--            start of second search-->
-                <form class="card border-0">
+                <form class="card border-0" onsubmit="func()">
                     <label for="roast-selection"><h4 class="mb-0 mt-2">ROAST</h4></label>
                     <select id="roast-selection2" class="mb-2 py-2">
-                        <option>all</option>
                         <option>Light</option>
                         <option>Medium</option>
                         <option>Dark</option>
                     </select>
                     <label for="search-item2"><h4 class="mb-0 mt-2">COFFEE NAME</h4></label>
-                    <input class="mb-2 py-2" type="text" name="" id="search-item2" placeholder="Search products" onkeyup="search()">
-                    <input class="btn btn-primary my-4" id="submit2" type="submit" />
+                    <input class="mb-2 py-2" type="text" name="" id="search-item2" placeholder="Search products">
+                    <sumbit class="btn btn-primary my-4" id="submit2" type="submit">ADD</sumbit>
                 </form>
                 <div class="coffeeImg"></div>
 
@@ -60,6 +59,12 @@
 
         </section>
 
+        <!-- TESTING LOCAL STORAGE CODE -->
+<!--        <div class="container">-->
+<!--            <input class="storage" type="text">-->
+<!--            <p class="text">Text</p>-->
+<!--            <button class="button">Save</button>-->
+<!--        </div>-->
 
 
         <script src="bros-coffee.js"></script>

@@ -86,3 +86,39 @@ tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees)
+
+//  TESTING LOCAL STORAGE CODE
+let addRoastSelection = document.querySelector('#roast-selection2');
+let userInput = document.querySelector('#search-item2')
+let newCoffeeSumbit = document.getElementById('submit2')
+function func(e) {
+    event.preventDefault()
+}
+
+newCoffeeSumbit.addEventListener('onclick', addCoffee)
+
+function addCoffee() {
+    let newCoffee = {
+        id: coffees[coffees.length - 1].id + 1,
+        name: userInput.value,
+        roast: addRoastSelection.value,
+        img:'<img src="img/Bros-Coffee-Cup.png" alt="">'};
+
+    coffees.push(newCoffee);
+    let x = [];
+
+    for(let i = 0; i < coffees.length; i++){
+        x = x + coffees[i];
+    }
+    return document.getElementById('test').innerHTML= x;
+    updateCoffees();
+}
+
+
+// const storageInput = document.querySelector('.storage');
+// const text = document.querySelector('.text');
+// const button = document.querySelector('.button ')
+//
+// storageInput.addEventListener('input', letter => {
+//     text.textContent = letter.target.value
+// })
