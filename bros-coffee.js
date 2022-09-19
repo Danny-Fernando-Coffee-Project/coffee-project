@@ -1,5 +1,5 @@
 "use strict"
-
+// making div that contains coffee name roast and img
 function renderCoffee(coffee) {
     let html = '<div class="coffee">';
     html += '<h2>' + coffee.name + '</h2>';
@@ -8,7 +8,7 @@ function renderCoffee(coffee) {
     html += '</div>';
     return html;
 }
-
+// renderCoffee function is being used on each element of the array that passes through this loop
 function renderCoffees(coffees) {
     let html = '';
     for(let i = 0; i < coffees.length; i++) {
@@ -16,19 +16,22 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-
+// sorting the coffees by rost
 function updateCoffees() {
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
+// if the select matches All then its compared with the rost of each coffee
     if (selectedRoast === 'All') {
         filteredCoffees = coffees.filter(function (coffee){
             return coffee.roast !== selectedRoast;})
     }
+// if the rost matches the selected rost then we push the matched coffees
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
     });
+// putting all matching coffees onto the HTML
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
@@ -82,7 +85,7 @@ roastSelection.addEventListener('change', updateCoffees);
 let addRoastSelection = document.querySelector('#roast-selection2');
 let userInput = document.querySelector('#search-item2')
 let newCoffeeSubmit = document.getElementById('submit2')
-function func(e) {
+function func(event){
     event.preventDefault()
 }
 
