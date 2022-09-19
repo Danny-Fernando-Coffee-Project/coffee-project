@@ -1,5 +1,9 @@
 
 /*ELEMENT SELECTORS*/
+tbody {
+    overflow: scroll;
+    height: 70vh;
+}
 html {
     cursor: url("img/Bros-curser.png"), auto !important;
 }
@@ -147,9 +151,6 @@ a {
 /*MEDIA QUERIES*/
 /* Small devices (phones and pocket devices, 576 and up) */
 @media screen and (max-width: 576px) {
-    tbody {
-        background-color: red;
-    }
 }
 
 /* Large devices (desktops, 992px and up) */
