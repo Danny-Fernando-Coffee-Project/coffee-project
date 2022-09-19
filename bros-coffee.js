@@ -21,7 +21,8 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    // e.preventDefault(); Dont Add this. It will make the img not add coffee
+
+    // e.preventDefault(); // Dont Add this. It will make the img not add coffee
     // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
