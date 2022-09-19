@@ -2,8 +2,10 @@
 
 function renderCoffee(coffee) {
     let html = '<div class="coffee">';
+    // html += '<div class="d-none">' + coffee.id + '</div>';
     html += '<h2>' + coffee.name + '</h2>';
     html += '<p class="inline-block">' + coffee.roast + '</p>';
+    // html += '<div class="coffeeImg">' + coffee.img + '</div>';
     html += '</div>';
 
     return html;
