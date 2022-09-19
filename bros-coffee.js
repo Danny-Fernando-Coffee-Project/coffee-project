@@ -30,11 +30,12 @@ function updateCoffees() {
         filteredCoffees = coffees.filter(function (coffee){
             return coffee.roast !== selectedRoast;})
     }
-    else {
-        filteredCoffees = coffees.filter(function (coffee){
-
-        });
-    }
+    //this does nothing
+    // else {
+    //     filteredCoffees = coffees.filter(function (coffee){
+    //
+    //     });
+    // }
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
@@ -105,8 +106,9 @@ function addCoffee() {
         name: userInput.value,
         roast: addRoastSelection.value,
         img:'<img src="img/Bros-Coffee-Cup.png" alt="">'};
-
-    coffees.push(newCoffee);
+    //unshift adds to the front
+    //push puts it to the back
+    coffees.unshift(newCoffee);
     let x = [];
 
     for(let i = 0; i < coffees.length; i++){

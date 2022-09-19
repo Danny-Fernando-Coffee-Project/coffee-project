@@ -27,15 +27,17 @@ function updateCoffees(e) {
     // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
+    // this part filters coffees to all
     if (selectedRoast === 'all') {
         filteredCoffees = coffees.filter(function (coffee){
             return coffee.roast !== selectedRoast;})
     }
-    else {
-        filteredCoffees = coffees.filter(function (coffee){
-
-        });
-    }
+    //this does nothing
+    // else {
+    //     filteredCoffees = coffees.filter(function (coffee){
+    //
+    //     });
+    // }
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
