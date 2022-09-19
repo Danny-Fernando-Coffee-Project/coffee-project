@@ -8,23 +8,23 @@ td, th {
     padding: 5px 10px;
 }
 
-.idsOfCoffees{
-    display: none;
+h2{
+    padding-left: 3rem;
+}
+p{
+    padding-top:12px;
+    justify-content: center;
 }
 
+a {
+
+}
 .coffee{
     width: 270px;
     margin: 3rem 1rem;
     border: none;
 }
 
-h2{
-    padding-left: 3rem;
-}
-p{
-    padding-top:1rem;
-    justify-content: center;
-}
-a {
-
+.idsOfCoffees{
+    display: none;
 }

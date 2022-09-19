@@ -1,17 +1,13 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    let html = '<div class="coffee d-flex">';
-    // html += '<div class="d-none">' + coffee.id + '</div>';
-    // html += '<div class="coffeeImg">' + coffee.img + '</div>';
+    let html = '<div class="coffee">';
     html += '<h2>' + coffee.name + '</h2>';
     html += '<p class="inline-block">' + coffee.roast + '</p>';
-
     html += '</div>';
 
     return html;
 }
-// html += '<h2>' + coffee.name + '</h2>';<img src="img/Bros-Coffee.png" alt="">
 
 function renderCoffees(coffees) {
     let html = '';
@@ -21,14 +17,13 @@ function renderCoffees(coffees) {
     return html;
 }
 
-function updateCoffees(e) {
+function updateCoffees() {
 
     e.preventDefault(); // Dont Add this. It will make the img not add coffee
     // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
-    // this part filters coffees to all
-    if (selectedRoast === 'all') {
+    if (selectedRoast === 'All') {
         filteredCoffees = coffees.filter(function (coffee){
             return coffee.roast !== selectedRoast;})
     }
@@ -67,20 +62,20 @@ const search = () => {
 }
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 1, name: 'Light City', roast: 'Light', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 2, name: 'Half City', roast: 'Light', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 3, name: 'Cinnamon', roast: 'Light', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 4, name: 'City', roast: 'Medium', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 5, name: 'American', roast: 'Medium', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 6, name: 'Breakfast', roast: 'Medium', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 7, name: 'High', roast: 'Dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 8, name: 'Continental', roast: 'Dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 9, name: 'New Orleans', roast: 'Dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 10, name: 'European', roast: 'Dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 11, name: 'Espresso', roast: 'Dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 12, name: 'Viennese', roast: 'Dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 13, name: 'Italian', roast: 'Dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
+    {id: 14, name: 'French', roast: 'Dark', img:'<img src="img/Bros-Coffee-Cup.png" alt="">'},
 ];
 
 let tbody = document.querySelector('#coffees');
@@ -92,4 +87,38 @@ tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees)
 
+//  TESTING LOCAL STORAGE CODE
+let addRoastSelection = document.querySelector('#roast-selection2');
+let userInput = document.querySelector('#search-item2')
+let newCoffeeSubmit = document.getElementById('submit2')
+function func(e) {
+    event.preventDefault()
+}
 
+newCoffeeSubmit.addEventListener('onclick', addCoffee)
+
+function addCoffee() {
+    let newCoffee = {
+        id: coffees[coffees.length - 1].id + 1,
+        name: userInput.value,
+        roast: addRoastSelection.value
+    };
+    //unshift adds to the front
+    //push puts it to the back
+    coffees.unshift(newCoffee);
+    let x = [];
+
+    for(let i = 0; i < coffees.length; i++){
+        x = x + coffees[i];
+    }
+    updateCoffees();
+}
+
+
+// const storageInput = document.querySelector('.storage');
+// const text = document.querySelector('.text');
+// const button = document.querySelector('.button ')
+//
+// storageInput.addEventListener('input', letter => {
+//     text.textContent = letter.target.value
+// })
