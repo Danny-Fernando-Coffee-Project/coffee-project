@@ -11,10 +11,11 @@
 
     </head>
     <body>
+<!--    nav bar start -->
         <nav class="navbar navbar-expand-lg custom-navbar">
             <div class="container-fluid">
                 <a class="navbar-brand">BROS COFFEE
-                    <img src="img/bro-coffee-blk-logo.png" alt="..." height="36">
+                    <img src="img/bro-coffee-blk-logo.png" alt="man holding a cup of coffee and smiling" height="36">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -36,17 +37,18 @@
                 </div>
             </div>
         </nav>
+<!-- HERO SCENE-->
         <img src="img/Bros-Coffee-Logo.png" alt="Man with coffee" class="Bro-logo">
         <h1 class="text-center">BROS COFFEE</h1>
-        <hr class="mx-auto d-sm-none d-none d-md-block" style="width: 90%;"> <!-- GREY LINE -->
-        <!--    This section encloses everything -->
+<!-- GREY LINE -->
+        <hr class="mx-auto d-sm-none d-none d-md-block" style="width: 90%;">
+<!--    This section encloses everything -->
         <section class="row">
-            <!--        coffee cards-->
+<!--        coffee cards -->
             <table class="col-6 col-sm-6">
                 <tbody id="coffees" class="d-flex flex-wrap"></tbody>
             </table>
-
-            <!--    search and sort card-->
+<!--    search and sort card-->
             <div class="col-6 mt-5">
                 <form class="card border-0" class="card">
                     <h3 class="subHeading">CHOOSE YOUR COFFEE</h3>
@@ -63,7 +65,7 @@
                 </form>
                 <hr>
                 <h3 class="subHeading"> ADD A COFFEE</h3>
-                <!--            start of second search-->
+<!--            start of second search that add a coffee to the front of the array -->
                 <form class="card border-0" onsubmit="func()"> <!--onsubmit function help it not refresh -->
                     <label for="roast-selection"><h4 class="mb-0 mt-2">ROAST</h4></label>
                     <select id="roast-selection2" class="mb-2 py-2">
@@ -75,25 +77,9 @@
                     <input class="mb-2 py-2" type="text" name="" id="search-item2" placeholder="Search products">
                     <input class="btn btn-primary my-4" id="submit2" onclick="addCoffee()" type="submit">
                 </form>
-                <div class="coffeeImg"></div>
-
-                <!--might not need this i tag     <i></i>-->
-                <!--            <form>-->
-                <!--                <input type="text" name="" id="search-item" placeholder="Search products"-->
-                <!--                       onkeyup="search()">-->
-                <!--            </form>-->
+                <div class="coffeeImg"></div>>-->
             </div>
         </section>
-
-
-
-        <!-- TESTING LOCAL STORAGE CODE -->
-<!--        <div class="container">-->
-<!--            <input class="storage" type="text">-->
-<!--            <p class="text">Text</p>-->
-<!--            <button class="button">Save</button>-->
-<!--        </div>-->
-
 
         <script src="bros-coffee.js"></script>
         <!-- JavaScript Bundle with Popper -->
