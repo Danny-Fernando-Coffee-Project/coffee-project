@@ -13,6 +13,7 @@ td, th {
 }
 
 .coffee{
+    width: 270px;
     margin: 3rem 1rem;
     border: none;
 }
@@ -21,5 +22,6 @@ h2{
     padding-left: 3rem;
 }
 p{
-    alignment-baseline: bottom;
+    padding-top:1rem;
+    justify-content: center;
 }
