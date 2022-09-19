@@ -22,7 +22,9 @@ function renderCoffees(coffees) {
 }
 
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+
+    e.preventDefault(); // Dont Add this. It will make the img not add coffee
+    // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value;
     let filteredCoffees = [];
     if (selectedRoast === 'all') {
@@ -32,7 +34,7 @@ function updateCoffees(e) {
     else {
         filteredCoffees = coffees.filter(function (coffee){
 
-        })
+        });
     }
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
@@ -88,29 +90,4 @@ tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees)
 
-//  TESTING LOCAL STORAGE CODE
-let addRoastSelection = document.querySelector('#roast-selection2');
-let userInput = document.querySelector('#search-item2')
-let newCoffeeSumbit = document.getElementById('submit2')
-function func(e) {
-    event.preventDefault()
-}
-
-newCoffeeSumbit.addEventListener('onclick', addCoffee)
-
-function addCoffee() {
-    let newCoffee = {
-        id: coffees[coffees.length - 1].id + 1,
-        name: userInput.value,
-        roast: addRoastSelection.value,
-        img:'<img src="img/Bros-Coffee-Cup.png" alt="">'};
-
-    coffees.push(newCoffee);
-    let x = [];
-
-    for(let i = 0; i < coffees.length; i++){
-        x = x + coffees[i];
-    }
-    updateCoffees();
-}
 
