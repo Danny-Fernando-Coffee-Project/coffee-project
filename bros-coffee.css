@@ -62,3 +62,13 @@ body {
 .btn-primary {
     background-color: rgb(0,100,60) !important;
 }
+/* Small devices (phones and pocket devices, 576 and up) */
+@media screen and (max-width: 576px) {
+    tbody {
+        background-color: red;
+    }
+}
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+
+}

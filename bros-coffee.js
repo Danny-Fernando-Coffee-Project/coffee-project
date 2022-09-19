@@ -20,7 +20,7 @@ function renderCoffees(coffees) {
     return html;
 }
 
-function updateCoffees(e) {
+function updateCoffees() {
 
     // e.preventDefault(); // Dont Add this. It will make the img not add coffee
     // don't submit the form, we just want to update the data
@@ -33,7 +33,7 @@ function updateCoffees(e) {
     else {
         filteredCoffees = coffees.filter(function (coffee){
 
-        })
+        });
     }
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
