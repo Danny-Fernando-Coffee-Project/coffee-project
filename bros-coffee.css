@@ -52,6 +52,9 @@ p { /* ROAST */
     padding-left: 70px;
     background-color: rgb(242,240,235);
 }
+.container-fluid {
+    background-color: rgb(242,240,235);
+}
 
 body {
     background-color: rgb(242,240,235) !important;
@@ -61,6 +64,13 @@ body {
 }
 .btn-primary {
     background-color: rgb(0,100,60) !important;
+}
+a {
+    font-family: Santana-Black, serif;
+    background-color: rgb(242,240,235);
+}
+.custom-navbar {
+    background-color: rgb(242,240,235);
 }
 /* Small devices (phones and pocket devices, 576 and up) */
 @media screen and (max-width: 576px) {
