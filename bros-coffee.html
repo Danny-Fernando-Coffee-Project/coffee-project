@@ -63,7 +63,8 @@
                         <option>Dark</option>
                     </select>
                     <label for="search-item"><h4 class="mb-0 mt-2">COFFEE NAME</h4></label>
-                    <input class="mb-2 py-2" type="text" name="" id="search-item" placeholder="Search products" onkeyup="search()">
+                    <input class="mb-2 py-2" autocomplete="off" type="text" name="" id="search-item" placeholder="Search products" onkeyup="search()">
+<!--                    <input type="text" autocomplete="off" id="filterInput" onfocus="this.value=''" value="Search for coffee">-->
                     <input class="btn btn-primary my-4" id="submit" type="submit"/>
                 </form>
                 <hr>
@@ -77,8 +78,8 @@
                         <option>Dark</option>
                     </select>
                     <label for="search-item2"><h4 class="mb-0 mt-2">COFFEE NAME</h4></label>
-                    <input class="mb-2 py-2" type="text" name="" id="search-item2" placeholder="Search products">
-                    <input class="btn btn-primary my-4" id="submit2" onclick="addCoffee()" type="submit">
+                    <input class="mb-2 py-2" type="text" autocomplete="off" name="" id="search-item2" placeholder="Search products">
+                    <input class="btn btn-primary my-4" autocomplete="off" id="submit2" onclick="addCoffee()" type="submit">
                 </form>
                 <div class="coffeeImg"></div>
             </div>

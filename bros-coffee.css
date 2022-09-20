@@ -2,7 +2,7 @@
 /*ELEMENT SELECTORS*/
 tbody {
     overflow: scroll;
-    height: 70vh;
+    height: 130vh;
 }
 html {
     cursor: url("img/Bros-curser.png"), auto !important;
